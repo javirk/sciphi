@@ -1,7 +1,5 @@
 """A module which facilitates JSONL data writing."""
 import json
-import os
-import time
 
 from sciphi.writers.base import DataWriter
 
@@ -13,13 +11,6 @@ class JsonlDataWriter(DataWriter):
         """Initialize the DataWriter."""
         self.output_path = output_path
         self.overwrite = overwrite
-
-    def _get_modified_path(self):
-        """Modify the output path if the file already exists and overwriting is not allowed."""
-        if not self.overwrite and os.path.exists(self.output_path):
-            base_name, ext = os.path.splitext(self.output_path)
-            return f"{base_name}_{int(time.time())}{ext}"
-        return self.output_path
 
     def write(self, data: list[dict]) -> None:
         """
