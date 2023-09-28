@@ -11,6 +11,7 @@ def build_llm_config(args: argparse.Namespace) -> dict:
     config_args = {
         "provider_name": ProviderName(args.provider_name),
         "model_name": args.model_name,
+        "model_path": args.model_path,
         "temperature": args.temperature,
         "top_p": args.top_p,
         "top_k": args.top_k,
@@ -72,6 +73,12 @@ def parse_arguments() -> argparse.Namespace:
         type=str,
         default="gpt-3.5-turbo",
         help="Model name to load from the provider.",
+    )
+    parser.add_argument(
+        "--model_path",
+        type=str,
+        default="",
+        help="Path to the model",
     )
     parser.add_argument(
         "--temperature",

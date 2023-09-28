@@ -152,7 +152,7 @@ if __name__ == "__main__":
             logger.debug("-" * 100)
 
             # Write the results using DataWriter
-            writer.write(
+            writer.append(
                 [
                     {
                         "formatted_prompt": formatted_prompt,
