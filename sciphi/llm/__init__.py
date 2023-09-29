@@ -5,6 +5,7 @@ from sciphi.llm.hugging_face_llm import HuggingFaceConfig, HuggingFaceLLM
 from sciphi.llm.llama_index_llm import LLamaIndexConfig, LlamaIndexLLM
 from sciphi.llm.openai_llm import OpenAIConfig, OpenAILLM
 from sciphi.llm.vllm_llm import vLLM, vLLMConfig
+from sciphi.llm.llama_cpp_python import LlamaCPPPython, LlamaCPPPythonConfig
 from sciphi.llm.llama_cpp import LlamaCPP, LlamaCPPConfig
 
 __all__ = [
@@ -25,5 +26,7 @@ __all__ = [
     "vLLMConfig",
     "vLLM",
     "LlamaCPP",
-    "LlamaCPPConfig"
+    "LlamaCPPConfig",
+    "LlamaCPPPython",
+    "LlamaCPPPythonConfig"
 ]
